@@ -4,6 +4,7 @@
                              phoenix_html,plug_cowboy,phoenix,phoenix_ecto]},
               {description,"rumbl"},
               {modules,['Elixir.Rumbl','Elixir.Rumbl.Accounts',
+                        'Elixir.Rumbl.Accounts.Credential',
                         'Elixir.Rumbl.Accounts.User',
                         'Elixir.Rumbl.Application','Elixir.Rumbl.DataCase',
                         'Elixir.Rumbl.Repo','Elixir.RumblWeb',
