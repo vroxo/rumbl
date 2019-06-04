@@ -10,7 +10,12 @@ defmodule Rumbl.Accounts.User do
     has_one :credential, Credential
 
     timestamps()
+  end
 
+  def registration_changeset(user, params) do
+    user
+    |> changeset(params)
+    |> cast_assoc(:credential, with: &Credential.changeset/2, required: true)
   end
 
   def registration_changeset(user, params) do
