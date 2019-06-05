@@ -18,12 +18,6 @@ defmodule Rumbl.Accounts.User do
     |> cast_assoc(:credential, with: &Credential.changeset/2, required: true)
   end
 
-  def registration_changeset(user, params) do
-    user
-    |> changeset(params)
-    |> cast_assoc(:credential, with: &Credential.changeset/2, required: true)
-  end
-
   def changeset(user, attrs) do
     user
     |> cast(attrs, [:name, :username])
